@@ -1,22 +1,73 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
+  <div class="display">
+      <ion-input type="number" ([ngModel])="displayValue" id="displayValue"></ion-input>
   </div>
+      <ion-row>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark" (click)="buttonClick('c')">C</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('( )')">( )</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('%')">%</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('/')">/</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('7')">7</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('8')">8</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('9')">9</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('X')">X</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('4')">4</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('5')">5</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('6')">6</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('-')">-</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('1')">1</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('2')">2</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('3')">3</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('+')">+</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('0')">0</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('del')">del</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('=')" id="resultado">=</ion-button>
+        </ion-col>
+      </ion-row>
+      
 </ion-content>
