@@ -6,37 +6,48 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule]
+  imports: [IonicModule],
 })
 
 export class HomePage {
-  
-  // displayValue
-  displayValue = '';
-  // botões da calculadora
-  buttons = ['c', '( )', '%', '/', '7', '8', '9', '*', '4', '5', '6', '-', '1', '2', '3', '+', '0'];
 
-  buttonClick(button: string) {
-    // valor do botão e valor exibido no displayValue
-    document.getElementById('displayValue')!.innerHTML += button;
-  }
+    result: number = 0; 
 
-  cleardisplayValue() {
-    // Limpa o valor exibido no displayValue
-    document.getElementById('displayValue')!.innerHTML = "";
-  }
-  back() {
-    const element = document.getElementById('displayValue');
-    if (element) {
-      const resultado = element.textContent!;
-      element.textContent = resultado.slice(0, -1);
-    }
-  }
+    buttonNumber(numero: number)
+    { 
+      if(this.result == 0){
+        document.getElementById('result')!.innerHTML = "";
+      }
+      let res = document.getElementById('result')!.innerHTML;       
+      document.getElementById('result')!.innerHTML += numero;
+     this.result = numero * 1;
+     } 
 
-  calculateResult() {
-    let resultado = document.getElementById('displayValue')!.innerHTML;
-    if (resultado) {
-      document.getElementById('displayValue')!.innerHTML = eval(resultado);
-    }
+     buttonOp(op: string){ 
+      if(this.result == 0){
+        document.getElementById('result')!.innerHTML = "";
+      }
+      let res = document.getElementById('result')!.innerHTML; 
+      document.getElementById('result')!.innerHTML += op; 
+    } 
+
+    clear(){ 
+      document.getElementById('result')!.innerHTML = "";
+   } 
+
+    back(): void {
+       let res = document.getElementById('result')!.innerHTML;
+        document.getElementById('result')!.innerHTML = res.substring(0, res.length - 1); 
+      } 
+      calc() {
+        let res = document.getElementById('result')!.innerHTML;
+        if (res) {
+          let result = eval(res);
+          if (typeof result === 'number') {
+            this.result = result;
+            document.getElementById('result')!.innerHTML = result.toString();
+          }
+        }
+      }
+      
   }
-}

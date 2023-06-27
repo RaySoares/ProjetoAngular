@@ -1,72 +1,72 @@
 <ion-content [fullscreen]="true">
   <div class="display">
-      <ion-input type="number" ([ngModel])="displayValue" id="displayValue"></ion-input>
+      <ion-label id="result"></ion-label>
   </div>
       <ion-row>
         <ion-col>
-          <ion-button class="botao" shape="round" color="dark" (click)="buttonClick('c')">C</ion-button>
+          <ion-button class="botao" shape="round" color="dark" (click)="clear('')">C</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('( )')">( )</ion-button>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonOp('( )')">( )</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('%')">%</ion-button>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonOp('%')">%</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('/')">/</ion-button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('7')">7</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('8')">8</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('9')">9</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('X')">X</ion-button>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonOp('/')">/</ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('4')">4</ion-button>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonNumber('7')">7</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('5')">5</ion-button>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonNumber('8')">8</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('6')">6</ion-button>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonNumber('9')">9</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('-')">-</ion-button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('1')">1</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('2')">2</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('3')">3</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('+')">+</ion-button>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonOp('X')">X</ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('0')">0</ion-button>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonNumber('4')">4</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('del')">del</ion-button>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonNumber('5')">5</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="botao" shape="round" color="dark (click)="buttonClick('=')" id="resultado">=</ion-button>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonNumber('6')">6</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonOp('-')">-</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonNumber('1')">1</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonNumber('2')">2</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonNumber('3')">3</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonOp('+')">+</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonNumber('0')">0</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonOp('del')">del</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="botao" shape="round" color="dark (click)="buttonOp('=')" id="res">=</ion-button>
         </ion-col>
       </ion-row>
       
